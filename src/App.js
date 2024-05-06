@@ -46,9 +46,9 @@ const [dob, setdob] = useState("");
             <label>Email Address:</label>
             <input type="text" className="inputField" onChange={(e)=>setemail(e.target.value)}/>
             <label>Phone Number:</label>
-            <input type="text" className="inputField" onChange={(e)=>setphone(e.target.value)}/>
+            <input type="number" className="inputField" onChange={(e)=>setphone(e.target.value)}/>
             <label>Date of Birth:</label>
-            <input type="text" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
+            <input type="date" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
             <br/>
             <button className="btnopenModal">Submit</button>
           </div>
