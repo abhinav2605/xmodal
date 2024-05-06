@@ -50,7 +50,7 @@ const [dob, setdob] = useState("");
           <form className="modal-content"onSubmit={submit}>
             <h1>Fill Details</h1>
             <label>Username:</label>
-            <input type="text" className="inputField" onChange={(e)=>setuser(e.target.value)}/>
+            <input type="text" id="username" className="inputField" onChange={(e)=>setuser(e.target.value)}/>
             <label>Email Address:</label>
             <input type="text" id="email" className="inputField" onChange={(e)=>setemail(e.target.value)}/>
             <label>Phone Number:</label>
