@@ -27,6 +27,8 @@ const [dob, setdob] = useState("");
       alert("Invalid email")
     else if(phone.length<10)
       alert("Invalid phone number")
+    else if(dob>new Date())
+      alert("Invalid date of birth")
   }
   return (
     <div className="App">
@@ -54,7 +56,7 @@ const [dob, setdob] = useState("");
             <label>Phone Number:</label>
             <input type="number" id="phone" className="inputField" onChange={(e)=>setphone(e.target.value)}/>
             <label>Date of Birth:</label>
-            <input type="date" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
+            <input type="date" id="dob" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
             <br/>
             <button className="btnopenModal submit-button" onClick={submit}>Submit</button>
           </div>
