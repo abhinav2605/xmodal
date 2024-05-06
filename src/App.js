@@ -22,6 +22,12 @@ const [dob, setdob] = useState("");
   function closeModal() {
     setIsOpen(false);
   }
+  function submit(){
+    if(Email.indexOf("@")==-1)
+      alert("Invalid email")
+    else if(phone.length<10)
+      alert("Invalid phone number")
+  }
   return (
     <div className="App">
       <h1>User Details Modal</h1>
@@ -44,13 +50,13 @@ const [dob, setdob] = useState("");
             <label>Username:</label>
             <input type="text" className="inputField" onChange={(e)=>setuser(e.target.value)}/>
             <label>Email Address:</label>
-            <input type="text" className="inputField" onChange={(e)=>setemail(e.target.value)}/>
+            <input type="text" id="email" className="inputField" onChange={(e)=>setemail(e.target.value)}/>
             <label>Phone Number:</label>
-            <input type="number" className="inputField" onChange={(e)=>setphone(e.target.value)}/>
+            <input type="number" id="phone" className="inputField" onChange={(e)=>setphone(e.target.value)}/>
             <label>Date of Birth:</label>
             <input type="date" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
             <br/>
-            <button className="btnopenModal">Submit</button>
+            <button className="btnopenModal submit-button" onClick={submit}>Submit</button>
           </div>
         </div>
       </Modal>
