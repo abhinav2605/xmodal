@@ -12,7 +12,34 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ModalContainer{
+  width: 35%;
+  height: 60%;
+  margin-top:5%;
+  margin-left: 35%;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.inputField{
+  width: 22vw;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.btnopenModal{
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  color: white;
+  /* font-weight: 700; */
+  width: fit-content;
+  font-size: 1em;
+  border: solid 1px white;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
