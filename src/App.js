@@ -47,7 +47,7 @@ const [dob, setdob] = useState("");
         {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
         {/* <button onClick={closeModal}>close</button> */}
         <div className="modal">
-          <div className="modal-content">
+          <form className="modal-content"onSubmit={submit}>
             <h1>Fill Details</h1>
             <label>Username:</label>
             <input type="text" className="inputField" onChange={(e)=>setuser(e.target.value)}/>
@@ -58,8 +58,8 @@ const [dob, setdob] = useState("");
             <label>Date of Birth:</label>
             <input type="date" id="dob" className="inputField" onChange={(e)=>setdob(e.target.value)}/>
             <br/>
-            <button className="btnopenModal submit-button" onClick={submit}>Submit</button>
-          </div>
+            <button className="btnopenModal submit-button" type="submit">Submit</button>
+          </form>
         </div>
       </Modal>
     </div>
